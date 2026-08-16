@@ -43,6 +43,19 @@ describe("topic pages", () => {
     expect([...positions].sort((a, b) => a - b)).toEqual(positions);
   });
 
+  it("keeps chapter numbers in navigation without a decorative hero number", () => {
+    for (const topic of siteConfig.topics) {
+      const models = {
+        venue: venueContent,
+        industry: industryPageModel(industryContent),
+        volunteer: volunteerPageModel(volunteerContent)
+      };
+      const html = renderTopicPage(topic, models[topic.key], { showDevelopmentSlots: false });
+      expect(html).not.toContain("topic-hero__number");
+      expect(html).toContain("local-nav__number");
+    }
+  });
+
   it("keeps the published industry story as two company sections", () => {
     expect(industryContent.companies.map((company) => company.key)).toEqual(["jianshe", "cssc"]);
     expect(industryContent.sourceUrl).toBe("https://mp.weixin.qq.com/s/rwPwf84M5_x62_a3LPeGVQ");

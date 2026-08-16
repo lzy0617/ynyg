@@ -128,7 +128,6 @@ export function renderTopicPage(topic, content, options = {}) {
   const articleLink = renderArticleLink(content.article, "阅读完整专题推文");
 
   return `<section class="topic-hero topic-hero--${escapeHtml(topic.key)}">
-    <div class="topic-hero__number" aria-hidden="true">${String(content.sections.length).padStart(2, "0")}</div>
     <div class="container topic-hero__inner"><p class="section-kicker">重庆社会实践 · 专题</p><h1>${escapeHtml(topic.title)}</h1><p class="topic-hero__subtitle">${escapeHtml(topicSubtitles[topic.key] || topic.description)}</p>${content.intro ? `<div class="reading topic-hero__intro">${renderParagraphs([content.intro])}</div>` : ""}</div>
   </section>
   <nav class="local-nav" aria-label="专题目录" style="--local-nav-count: ${content.sections.length}"><div class="container">${localNav}</div></nav>

@@ -408,18 +408,6 @@
   content: "";
 }
 
-.topic-hero__number {
-  position: absolute;
-  right: 4vw;
-  bottom: -0.3em;
-  z-index: 1;
-  color: rgba(166, 31, 36, 0.065);
-  font-family: Georgia, serif;
-  font-size: var(--fs-decorative-index);
-  font-weight: var(--fw-bold);
-  line-height: var(--lh-tight);
-}
-
 .local-nav {
   position: sticky;
   top: 76px;
