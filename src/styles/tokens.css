@@ -1,0 +1,62 @@
+:root {
+  --bg: #ffffff;
+  --surface: #faf8f6;
+  --surface-deep: #f3eeeb;
+  --red: #a61f24;
+  --red-dark: #741419;
+  --red-light: #c34348;
+  --text: #211f1e;
+  --muted: #6f6864;
+  --border: #e8e0dc;
+  --max-width: 1180px;
+  --reading-width: 780px;
+  --radius: 4px;
+  --radius-large: 10px;
+  --shadow: 0 20px 60px rgba(60, 32, 28, 0.1);
+
+  /* Fluid type scale: 390px mobile through 1920px desktop. */
+  --fs-display: clamp(2.625rem, 5vw, 5rem);
+  --fs-page-title: clamp(2.5rem, 3.6vw, 4rem);
+  --fs-section-title: clamp(1.875rem, 2.6vw, 2.75rem);
+  --fs-subsection-title: clamp(1.625rem, calc(1.5rem + 0.4vw), 2rem);
+  --fs-card-title: clamp(1.375rem, calc(1.25rem + 0.25vw), 1.625rem);
+  --fs-body-large: clamp(1.125rem, calc(1.02rem + 0.23vw), 1.375rem);
+  --fs-body: clamp(1rem, calc(0.98rem + 0.12vw), 1.125rem);
+  --fs-nav: clamp(1rem, calc(0.96rem + 0.08vw), 1.0625rem);
+  --fs-eyebrow: clamp(1rem, calc(0.96rem + 0.1vw), 1.125rem);
+  --fs-small: 0.9375rem;
+  --fs-caption: 0.9375rem;
+  --fs-debug: 0.8125rem;
+  --fs-decorative-wide: clamp(5rem, 8vw, 8rem);
+  --fs-decorative-index: clamp(8rem, 12vw, 12rem);
+  --fs-decorative-card: clamp(4.5rem, 6vw, 6rem);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-display: 1.16;
+  --lh-tight: 1;
+  --lh-title: 1.24;
+  --lh-heading: 1.32;
+  --lh-control: 1.5;
+  --lh-body: 1.82;
+  --lh-reading: 1.9;
+  --lh-small: 1.62;
+
+  --tracking-title: -0.02em;
+  --tracking-decorative: -0.04em;
+  --tracking-eyebrow: 0.08em;
+  --tracking-meta: 0.03em;
+  --tracking-label: 0.12em;
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: clamp(3rem, 5vw, 4.5rem);
+  --section-space: clamp(4rem, 7vw, 6.5rem);
+}
