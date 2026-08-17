@@ -9,7 +9,6 @@ export function renderHeader(config, activePage) {
 
   return `<div class="site-header__inner container">
     <a class="brand" href="/" aria-label="返回首页">
-      <span class="brand__seal" aria-hidden="true">渝</span>
       <span class="brand__text"><strong>渝你有关</strong><small>${escapeHtml(config.project.displayTitle)}</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span aria-hidden="true"></span><span class="sr-only">打开菜单</span></button>
@@ -19,7 +18,7 @@ export function renderHeader(config, activePage) {
 
 export function renderFooter(config) {
   return `<div class="container footer-inner">
-    <div class="footer-brand"><span class="brand__seal" aria-hidden="true">渝</span><div><strong>${escapeHtml(config.project.theme)}</strong><p>${escapeHtml(config.project.teamName)}</p></div></div>
+    <div class="footer-brand"><div><strong>${escapeHtml(config.project.theme)}</strong><p>${escapeHtml(config.project.teamName)}</p></div></div>
     <div class="footer-meta"><span>${escapeHtml(config.project.dates)}</span><span>${escapeHtml(config.project.location)}</span></div>
   </div>`;
 }

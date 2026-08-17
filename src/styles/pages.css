@@ -176,6 +176,10 @@
   line-height: var(--lh-title);
 }
 
+.practice-meta strong.practice-meta__number {
+  font-size: var(--fs-stat-number);
+}
+
 .practice-meta span {
   margin-top: 0.55rem;
   color: var(--muted);

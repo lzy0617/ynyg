@@ -14,6 +14,7 @@ describe("global typography system", () => {
       "--fs-page-title",
       "--fs-section-title",
       "--fs-subsection-title",
+      "--fs-stat-number",
       "--fs-card-title",
       "--fs-body-large",
       "--fs-body",

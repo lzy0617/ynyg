@@ -17,7 +17,6 @@ function topicCards(config, content, options) {
     return `<article class="topic-card topic-card--${escapeHtml(topic.key)}">
       <div class="topic-card__visual">${media || `<span class="topic-card__monogram" aria-hidden="true">0${index + 1}</span>`}</div>
       <div class="topic-card__body">
-        <span class="topic-card__number">专题 0${index + 1}</span>
         <h3>${escapeHtml(topic.title)}</h3>
         <p>${escapeHtml(topic.description)}</p>
         <a class="text-link" href="${escapeHtml(topic.href)}">进入专题<span aria-hidden="true"> →</span></a>
@@ -51,12 +50,12 @@ export function renderHomePage(config, content, options = {}) {
   </section>
   <section id="overview" class="overview section">
     <div class="container">
-      <div class="section-heading"><div><p class="section-kicker">实践概览</p><h2>从城市现场，读懂使命与担当</h2></div><p>沿着红色文化、现代工业与青年志愿服务三条实践主线，在山城完成一次面向历史、产业与人民的深度学习。</p></div>
-      <div class="practice-meta" aria-label="实践基本信息"><div><strong>${escapeHtml(config.project.dates)}</strong><span>实践时间</span></div><div><strong>${escapeHtml(config.project.location)}</strong><span>实践地点</span></div><div><strong>3</strong><span>重点专题</span></div><div><strong>3</strong><span>专题报道</span></div></div>
+      <div class="section-heading"><div><p class="section-kicker">实践概览</p><h2>从城市现场，读懂使命与担当</h2></div><p>在山城，我们走访红色旧址、探访现代企业、参与志愿服务，在实践中了解历史、产业和当地生活。</p></div>
+      <div class="practice-meta" aria-label="实践基本信息"><div><strong>${escapeHtml(config.project.dates)}</strong><span>实践时间</span></div><div><strong>${escapeHtml(config.project.location)}</strong><span>实践地点</span></div><div><strong class="practice-meta__number">3</strong><span>重点专题</span></div><div><strong class="practice-meta__number">3</strong><span>专题报道</span></div></div>
     </div>
   </section>
   <section class="section section--soft">
-    <div class="container"><div class="section-heading"><div><p class="section-kicker">实践主线</p><h2>三个专题，一条完整实践脉络</h2></div><p>从历史深处汲取精神力量，在大国重器中感受工业脉搏，以青春行动回应时代召唤。</p></div><div class="topic-grid">${topicCards(config, content, options)}</div></div>
+    <div class="container"><div class="section-heading"><div><p class="section-kicker">实践主线</p><h2>山城百年红色精神的历史回响与时代续写</h2></div><p>从历史深处汲取精神力量，在大国重器中感受工业脉搏，以青春行动回应时代召唤。</p></div><div class="topic-grid">${topicCards(config, content, options)}</div></div>
   </section>
   <section class="section video-section">
     <div class="container"><div class="section-heading"><div><p class="section-kicker">实践影像 · 01</p><h2>${escapeHtml(practiceFilm.title)}</h2></div></div>${renderVideoCard(practiceFilm)}</div>
@@ -65,7 +64,7 @@ export function renderHomePage(config, content, options = {}) {
     <div class="container"><div class="section-heading"><div><p class="section-kicker">城市观察 · 02</p><h2>${escapeHtml(cityFilm.title)}</h2></div><p>循着两江交汇的脉络，阅读山城的空间、文化与精神。</p></div>${renderVideoCard(cityFilm)}</div>
   </section>
   <section id="about" class="section about-section">
-    <div class="container about-grid"><div><p class="section-kicker">关于实践</p><h2>在重庆，把课堂延伸到真实世界</h2></div><div class="about-copy"><p>${escapeHtml(config.project.teamName)}于 ${escapeHtml(config.project.dates)} 走进${escapeHtml(config.project.location)}，围绕红色文化传承、重点企业参访与退伍老兵慰问开展实践。</p><dl><div><dt>红岩寻踪</dt><dd>走访五处红色场馆，重温山城红色记忆</dd></div><div><dt>精工报国</dt><dd>走进国家重点单位，理解制造强国根基</dd></div><div><dt>青年行动</dt><dd>陪伴、倾听与服务，让青春回应历史</dd></div></dl></div></div>
+    <div class="container about-grid"><div><p class="section-kicker">关于实践</p><h2>在重庆，把课堂延伸到真实世界</h2></div><div class="about-copy"><p>${escapeHtml(config.project.teamName)}于 ${escapeHtml(config.project.dates)} 走进${escapeHtml(config.project.location)}，围绕红色文化传承、重点企业参访与退伍老兵慰问开展实践。</p></div></div>
   </section>`;
 }
 

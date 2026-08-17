@@ -9,21 +9,21 @@ export const siteConfig = {
   topics: [
     {
       key: "venue",
-      title: "红岩寻踪",
+      title: "历史解码",
       href: "/venue/",
-      description: "特园 · 桂园 · 周公馆 · 红岩革命纪念馆 · 歌乐山革命纪念馆"
+      description: "特园 · 桂园 · 周公馆 · 红岩 · 歌乐山"
     },
     {
       key: "industry",
       title: "精工报国",
       href: "/industry/",
-      description: "重庆建设工业 · 中船（重庆）装备技术有限公司"
+      description: "重庆建设工业集团·中船（重庆）装备公司"
     },
     {
       key: "volunteer",
       title: "青年行动",
       href: "/volunteer/",
-      description: "慰问老兵 · 深度访谈 · 志愿服务 · 文艺献礼"
+      description: "慰问老兵 · 深度访谈 · 文艺献礼"
     }
   ],
   navigation: [
