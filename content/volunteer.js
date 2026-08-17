@@ -1,5 +1,12 @@
 import { makeMediaSlots } from "../src/lib/media.js";
 
+const volunteerHomevisitSlots = makeMediaSlots("volunteer-homevisit", 4);
+const volunteerInterviewSlots = makeMediaSlots("volunteer-interview", 2, "wide");
+const volunteerCareSlots = makeMediaSlots("volunteer-care", 4);
+const volunteerPerformanceSlots = makeMediaSlots("volunteer-performance", 4);
+const volunteerTributeSlots = makeMediaSlots("volunteer-tribute", 4);
+const volunteerGallerySlots = makeMediaSlots("volunteer-gallery", 10, "gallery");
+
 export const volunteerContent = {
   sourceUrl: "https://mp.weixin.qq.com/s/22Yyg6NfMhzOt7ZVE1cuGg",
   intro: `岁月无言，山河有声。抗战老兵是烽火岁月的亲历者、峥嵘历史的见证者，更是红色精神永续不绝的传承者。为向革命先辈致以崇高敬意、赓续红色精神血脉、践行新时代青年使命担当，7月26日，竺可桢学院“红韵山城承使命，精工报国践初心”社会实践团走进军杰康养中心，开展“致敬退伍老兵，传承红色精神”专题志愿服务。团队以温情陪伴倾听红色往事，以贴心服务关怀老兵日常，在面对面的对话访谈、实打实的暖心行动中，躬身践行青年一代的责任与担当。`,
@@ -13,7 +20,28 @@ export const volunteerContent = {
         `过程中，成员们为老兵递送红色主题杂志，陪伴老人翻阅读物，一同回顾峥嵘岁月里的革命故事。同时，实践团成员携带简易医疗设备，为老人们测量血压，细致记录身体数据，贴心叮嘱老人日常养生的相关注意事项，以细微举动传递温暖与关怀。`,
         `闲暇之余，老兵们结合自身军旅经历，向实践团成员们娓娓讲述军营生活、作战经历与时代变迁的故事。那些尘封的峥嵘往事、艰苦卓绝的奋斗历程，真实展现了老一辈军人保家卫国、坚守初心的责任与担当。此外，老兵们结合自身阅历，对当代青年寄予殷切期望，叮嘱青年学子珍惜当下和平生活、脚踏实地深耕学习、勇担时代使命，不负韶华、不负时代。`
       ],
-      media: makeMediaSlots("volunteer-homevisit", 4)
+      media: [
+        {
+          ...volunteerHomevisitSlots[0],
+          src: "/assets/images/volunteer/659A2509.webp",
+          alt: "实践团成员走访慰问"
+        },
+        {
+          ...volunteerHomevisitSlots[1],
+          src: "/assets/images/volunteer/659A2504.webp",
+          alt: "实践团成员为老兵测量血压"
+        },
+        {
+          ...volunteerHomevisitSlots[2],
+          src: "/assets/images/volunteer/659A2505.webp",
+          alt: "实践团成员走访慰问"
+        },
+        {
+          ...volunteerHomevisitSlots[3],
+          src: "/assets/images/volunteer/659A2484.webp",
+          alt: "实践团成员走访慰问"
+        },
+      ]
     },
     {
       key: "interview",
@@ -25,7 +53,18 @@ export const volunteerContent = {
         `罗、陈两位爷爷则回忆，早年放射科诊疗防护设施简陋，医护人员需近距离直面辐射危害，可身为军人，服从命令是天职，二人始终坚守岗位、从未退缩。对越自卫反击战期间，医院全员紧急动员，超负荷承接各地转运而来的战伤伤员，纵使医疗条件艰苦、工作强度极大，全体医护依旧义无反顾、全力以赴开展救治工作。`,
         `访谈中，罗爷爷感慨祖国疆域辽阔、山河秀美；陈爷爷则寄语青年，要读书更要重视社会实践，在实践中锤炼解决问题的能力。李、赵两位长辈亦结合人生经历送上嘱托，勉励青年脚踏实地、紧抓时代机遇，主动为国家发展贡献力量。老一辈朴实恳切的话语，饱含对青年一代的深切期许，令队员深受触动。`
       ],
-      media: makeMediaSlots("volunteer-interview", 4)
+      media: [
+        {
+          ...volunteerInterviewSlots[0],
+          src: "/assets/images/volunteer/v1.webp",
+          alt: "实践团成员与李爷爷、赵奶奶进行深度访谈"
+        },
+        {
+          ...volunteerInterviewSlots[1],
+          src: "/assets/images/volunteer/659A2519.webp",
+          alt: "实践团成员与罗、陈两位爷爷合影留念"
+        }
+      ]
     },
     {
       key: "care",
@@ -34,7 +73,28 @@ export const volunteerContent = {
       paragraphs: [
         `完成全部入户走访工作后，实践团全体成员统一前往军杰康养中心，开展面向院内全体老兵的集体慰问活动。康养中心内不少老兵年事已高，行动不便，无法自主往返活动场地。见状，实践团成员主动分工，全程细心搀扶腿脚迟缓的老人，平稳推送轮椅，缓慢护送每一位老兵有序抵达活动现场，全程留意老人身体感受，保障出行安全。时值盛夏，天气闷热干燥，康养中心提前熬制清凉解暑的绿豆汤，待老人全部落座后，实践团成员逐一端送至每位老人面前，细心询问老人饮用需求，贴心关照肠胃不适、不喜甜食的长辈。全程成员们举止谦和、耐心周到，以细致入微的服务为老兵送去夏日清凉，充分展现当代青年礼貌友善、踏实肯干的精神风貌。`
       ],
-      media: makeMediaSlots("volunteer-care", 4)
+      media: [
+        {
+          ...volunteerCareSlots[0],
+          src: "/assets/images/volunteer/659A2528.webp",
+          alt: "实践团成员为老兵端送绿豆汤"
+        },
+        {
+          ...volunteerCareSlots[1],
+          src: "/assets/images/volunteer/659A2521.webp",
+          alt: "实践团成员为老兵端送绿豆汤"
+        },
+        {
+          ...volunteerCareSlots[2],
+          src: "/assets/images/volunteer/659A2523.webp",
+          alt: "实践团成员和工作人员为老兵端送绿豆汤"
+        },
+        {
+          ...volunteerCareSlots[3],
+          src: "/assets/images/volunteer/659A2522.webp",
+          alt: "实践团成员为老兵端送绿豆汤"
+        }
+      ]
     },
     {
       key: "performance",
@@ -44,7 +104,28 @@ export const volunteerContent = {
         `访谈结束后，实践团筹备已久的文艺汇演正式拉开帷幕。团队以青春节目礼赞革命先辈，用多样形式传递青年家国情怀。古典舞蹈《寄明月》舞姿温婉雅致，国风表演舒缓现场氛围，为整场活动增添温情气息；朗诵节目《觉醒年代》《百年交响》铿锵有力、气势厚重，成员们以沉稳昂扬的语调回望百年风雨征程，礼赞一代代先辈攻坚克难的奋斗精神；合唱《少年》《有我》朝气蓬勃、热血真挚，唱出新时代青年不忘初心、勇担使命的坚定信念。`,
         `青年饱含热忱的表演打动了在场每一位老兵，现场掌声持续不断。表演环节尾声，在场的爷爷奶奶们也送上他们的感谢与祝福，共同合唱两首经典红色老歌，熟悉激昂的旋律响彻全场。老一辈军人的歌声承载着扎根心底的赤诚家国热忱，青年与先辈歌声相互呼应，形成青年致敬先辈、先辈感召青年的双向红色共鸣，现场氛围温暖动人。`
       ],
-      media: makeMediaSlots("volunteer-performance", 4)
+      media: [
+        {
+          ...volunteerPerformanceSlots[0],
+          src: "/assets/images/volunteer/659A2603.webp",
+          alt: "实践团成员表演合唱节目《有我》"
+        },
+        {
+          ...volunteerPerformanceSlots[1],
+          src: "/assets/images/volunteer/659A2583.webp",
+          alt: "实践团成员表演朗诵节目《觉醒年代》"
+        },
+        {
+          ...volunteerPerformanceSlots[2],
+          src: "/assets/images/volunteer/659A2569.webp",
+          alt: "爷爷奶奶们送上感谢与祝福"
+        },
+        {
+          ...volunteerPerformanceSlots[3],
+          src: "/assets/images/volunteer/659A2633.webp",
+          alt: "爷爷奶奶们合唱红色老歌"
+        }
+      ]
     },
     {
       key: "tribute",
@@ -54,9 +135,81 @@ export const volunteerContent = {
         `文艺汇演全部结束后，现场举行庄重的致敬仪式。实践团成员依次走到每位老兵身前，为长辈佩戴光荣胸花，熠熠生辉的胸花是对老兵们将青春与热血奉献国家的最高礼赞，致敬他们数十年保家卫国、建设山河的坚守。`,
         `仪式同时，实践团成员将提前精心挑选、打包完备的慰问品逐一送至老兵手中，向长辈送上诚挚祝福。收到胸花与慰问品的老人们笑容满面，反复向实践团成员们表达感谢，纷纷表示本次慰问活动安排用心、内容充实，既能有人陪伴谈心，又能欣赏文艺节目，对老年生活极具意义，真切感受到青年群体发自内心的关怀与敬意。`
       ],
-      media: makeMediaSlots("volunteer-tribute", 4)
+      media: [
+        {
+          ...volunteerTributeSlots[0],
+          src: "/assets/images/volunteer/659A2619.webp",
+          alt: "实践团成员为老兵佩戴光荣胸花"
+        },
+        {
+          ...volunteerTributeSlots[1],
+          src: "/assets/images/volunteer/659A2624.webp",
+          alt: "实践团成员为老兵佩戴光荣胸花"
+        },
+        {
+          ...volunteerTributeSlots[2],
+          src: "/assets/images/volunteer/659A2625.webp",
+          alt: "实践团成员为老兵佩戴光荣胸花"
+        },
+        {
+          ...volunteerTributeSlots[3],
+          src: "/assets/images/volunteer/659A2626.webp",
+          alt: "实践团成员为老兵佩戴光荣胸花"
+        }
+      ]
     }
   ],
   summary: [`本次慰问不仅是一场暖心志愿服务，更是一堂沉浸式实景红色课堂。入户陪伴、全程陪护、多轮深度访谈层层递进，让青年近距离触摸战地医疗、三线建设真实历史。放射岗位不惧辐射的坚守、战时全员冲锋的担当、前辈脚踏实地的谆谆教诲，都是直击人心的鲜活红色教材。老一辈以青春赴使命、以热血护山河，用一生诠释忠诚奉献、艰苦奋斗的崇高精神，筑牢青年精神根基。竺可桢学院赴重庆社会实践团以精工报国为初心，在陪伴中致敬先辈，在倾听中传承红色血脉。未来，实践团全体成员将把本次实践感悟内化于心、外化于行，铭记老兵事迹、传承红色精神，将所见所感转化为奋进动力，深耕专业、立足实干，把青春理想融入民族复兴征程，以青年之力接续报国，让红色薪火代代相传。`],
-  gallery: makeMediaSlots("volunteer-gallery", 10, "gallery")
+  gallery: [
+    {
+      ...volunteerGallerySlots[0],
+      src: "/assets/images/volunteer/659A2637.webp",
+      alt: "实践团成员与老兵合影留念"
+    },
+    {
+      ...volunteerGallerySlots[1],
+      src: "/assets/images/volunteer/659A2526.webp",
+      alt: "实践团成员为老兵端送绿豆汤"
+    },
+    {
+      ...volunteerGallerySlots[2],
+      src: "/assets/images/volunteer/659A2513.webp",
+      alt: "老兵爷爷"
+    },
+    {
+      ...volunteerGallerySlots[3],
+      src: "/assets/images/volunteer/659A2529.webp",
+      alt: "实践团成员为老兵端送绿豆汤"
+    },
+    {
+      ...volunteerGallerySlots[4],
+      src: "/assets/images/volunteer/659A2536.webp",
+      alt: "文艺献礼开场致辞"
+    },
+    {
+      ...volunteerGallerySlots[5],
+      src: "/assets/images/volunteer/659A2549.webp",
+      alt: "实践团成员表演《寄明月》"
+    },
+    {
+      ...volunteerGallerySlots[6],
+      src: "/assets/images/volunteer/659A2588.webp",
+      alt: "实践团成员表演朗诵节目《百年交响》"
+    },
+    {
+      ...volunteerGallerySlots[7],
+      src: "/assets/images/volunteer/659A2613.webp",
+      alt: "老兵爷爷奶奶们"
+    },
+    {
+      ...volunteerGallerySlots[8],
+      src: "/assets/images/volunteer/659A2621.webp",
+      alt: "实践团成员为老兵佩戴光荣胸花"
+    },
+    {
+      ...volunteerGallerySlots[9],
+      src: "/assets/images/volunteer/659A2634.webp",
+      alt: "爷爷奶奶们合唱红色老歌"
+    }
+  ]
 };

@@ -1,5 +1,8 @@
 import { makeMediaSlots } from "../src/lib/media.js";
 
+const industryJiansheSlots = makeMediaSlots("industry-jianshe", 2, "wide");
+const industryCSSCSlots = makeMediaSlots("industry-cssc", 3, "wide");
+
 export const industryContent = {
   sourceUrl: "https://mp.weixin.qq.com/s/rwPwf84M5_x62_a3LPeGVQ",
   intro: `为深入感悟我国重点领域发展成就，打通课堂理论与产业一线的认知壁垒，实践团队先后走进重庆建设工业（集团）有限责任公司、中船（重庆）装备技术有限公司两大国家级重点单位开展实地研学参访，沿着百年兵工、深蓝造船两条产业脉络，沉浸探访企业展馆、智能生产车间，并与行业专家开展专题座谈，全方位读懂大国重器背后的工业根基、创新力量与时代使命。`,
@@ -14,7 +17,18 @@ export const industryContent = {
         `离开展厅，团队进入企业标准化智能制造生产车间，近距离观摩核心零部件全流程加工制造。车间内自动化数控机床、工业机械臂、智能在线检测设备有序运转，全流程数字化管控体系实时监控加工精度，一改传统兵工厂粗放加工的固有印象，“零容错、高标准”的严苛要求让同学们深受震撼。`,
         `座谈访谈中，团队围绕现代工业演进历程展开交流，企业领导结合当前复杂国际形势，剖析国防安全、产业链经济、文化认知层面存在的各类风险挑战，并介绍企业针对性落地的应对方案，让同学们深刻体会精益求精的工程精神与自主创新的时代内核。`
       ],
-      media: makeMediaSlots("industry-jianshe", 3)
+      media: [
+        {
+          ...industryJiansheSlots[0],
+          src: "/assets/images/industry/jiangonglogo.webp",
+          alt: "重庆建设工业（集团）有限责任公司"
+        },
+        {
+          ...industryJiansheSlots[1],
+          src: "/assets/images/industry/jiangong.webp",
+          alt: "实践团成员合影"
+        },
+      ]
     },
     {
       key: "cssc",
@@ -25,7 +39,23 @@ export const industryContent = {
         `在中船（重庆）装备技术有限公司的参访过程中，实践团队通过企业展厅参观、聆听现场讲解等方式，深入了解了我国船舶工业的发展历程、产业布局以及科技创新成果。展厅内海量图文资料、舰船实体模型、核心零部件展品构建起完整产业科普体系，让同学们直观感受到大型船舶从设计研发到建造完成背后所涉及的复杂工程体系。`,
         `展厅参观结束后，团队与集团技术专家、人力资源负责人开展座谈访谈。同学们围绕企业发展沿革、核心技术自主创新突破、行业竞争格局、高校人才培养对接、就业发展路径等多维度主动提问，企业领导逐一细致解答。`
       ],
-      media: makeMediaSlots("industry-cssc", 3)
+      media: [
+        {
+          ...industryCSSCSlots[0],
+          src: "/assets/images/industry/cssclogo.webp",
+          alt: "中船（重庆）装备技术有限公司"
+        },
+        {
+          ...industryCSSCSlots[1],
+          src: "/assets/images/industry/cssc.webp",
+          alt: "实践团成员合影"
+        },
+        {
+          ...industryCSSCSlots[2],
+          src: "/assets/images/industry/csscmeeting.webp",
+          alt: "实践团成员与企业领导座谈"
+        }
+      ]
     }
   ],
   summary: [`通过此次参访，同学们认识到，国家工业发展离不开长期的技术积累、工程实践与创新突破。无论是精密制造中的严谨工艺，还是大型装备研发中的系统协同，都体现了新时代工业建设者追求卓越、勇于创新的精神。作为新时代青年，浙大学子将以此次实践为契机，进一步提升专业素养，关注国家产业发展需求，将个人成长融入科技创新与制造强国建设之中，为未来投身国家发展贡献青春力量。`]

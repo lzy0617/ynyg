@@ -1,11 +1,25 @@
 import { makeMediaSlots } from "../src/lib/media.js";
 
 export const homeContent = {
-  heroMedia: makeMediaSlots("home-hero", 1, "wide")[0],
+  heroMedia: {
+    ...makeMediaSlots("home-hero", 1, "wide")[0],
+    src: "/assets/images/home/home.webp",
+    alt: "红岩映山城，赤心赴家园",
+    caption: ""
+  },
   topicMedia: {
-    venue: makeMediaSlots("home-topic-venue", 1, "wide")[0],
-    industry: makeMediaSlots("home-topic-industry", 1, "wide")[0],
-    volunteer: makeMediaSlots("home-topic-volunteer", 1, "wide")[0]
+    venue: {
+      ...makeMediaSlots("home-topic-venue", 1, "wide")[0],
+      src: "/assets/images/venue/659A1901.webp",
+    },
+    industry: {
+      ...makeMediaSlots("home-topic-industry", 1, "wide")[0],
+      src: "/assets/images/industry/csscmeeting.webp",
+    },
+    volunteer: {
+      ...makeMediaSlots("home-topic-volunteer", 1, "wide")[0],
+      src: "/assets/images/volunteer/659A2483.webp",
+    }
   },
   videos: [
     {

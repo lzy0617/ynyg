@@ -743,3 +743,8 @@ body[data-page="volunteer"] .story-section:nth-of-type(even) .story-section__cop
     top: 66px;
   }
 }
+
+.hero__visual .media__open img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
