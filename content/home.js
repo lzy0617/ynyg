@@ -26,18 +26,18 @@ export const homeContent = {
       id: "practice-film",
       title: "实践纪实片",
       description: "聚焦实践团在重庆的企业参访、红色场馆实践与志愿服务。",
-      cover: "",
-      url: "",
-      status: "pending",
+      cover: "/assets/images/home/2.jpg",
+      url: "https://www.bilibili.com/video/BV1JSbi62ERH/",
+      status: "published",
       priority: "primary"
     },
     {
       id: "city-film",
       title: "山城印象",
       description: "聚焦重庆城市风貌、地方文化、人文特色与城市精神。",
-      cover: "",
-      url: "",
-      status: "pending",
+      cover: "/assets/images/home/659A1918.webp",
+      url: "https://www.bilibili.com/video/BV1Mrb66BEy6/",
+      status: "published",
       priority: "secondary"
     }
   ],
