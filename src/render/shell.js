@@ -9,6 +9,7 @@ export function renderHeader(config, activePage) {
 
   return `<div class="site-header__inner container">
     <a class="brand" href="/" aria-label="返回首页">
+      <img class="brand__logo" src="/assets/images/home/ckc_logo.png" alt="竺可桢学院">
       <span class="brand__text"><strong>渝你有关</strong><small>${escapeHtml(config.project.displayTitle)}</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span aria-hidden="true"></span><span class="sr-only">打开菜单</span></button>

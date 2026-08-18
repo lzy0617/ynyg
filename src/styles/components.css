@@ -527,3 +527,11 @@
     min-height: 230px;
   }
 }
+
+.brand__logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
