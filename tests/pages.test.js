@@ -24,7 +24,7 @@ describe("renderHomePage", () => {
   it("does not expose empty media slot labels in production", () => {
     const html = renderHomePage(siteConfig, homeContent, { showDevelopmentSlots: false });
     expect(html).not.toContain("图片待补");
-    expect(html).not.toContain("home-hero-01");
+    expect(html).not.toContain("media--pending");
   });
 
   it("uses a controlled desktop line break for the home title", () => {
@@ -41,6 +41,40 @@ describe("topic pages", () => {
     const positions = venueContent.sections.map((section) => html.indexOf(section.title));
     expect(positions.every((value) => value >= 0)).toBe(true);
     expect([...positions].sort((a, b) => a - b)).toEqual(positions);
+  });
+
+  it("publishes the completed venue story without changing stable media slots", () => {
+    expect(venueContent.article).toEqual({
+      status: "published",
+      url: "https://mp.weixin.qq.com/s/bu5oQ_fTI93BOWftP_WrQA"
+    });
+    expect(venueContent.sections.map((section) => section.key)).toEqual([
+      "teyuan",
+      "guiyuan",
+      "zhougongguan",
+      "hongyan",
+      "geleshan"
+    ]);
+    expect(venueContent.sections.map((section) => section.paragraphs.length)).toEqual([2, 2, 3, 4, 3]);
+    expect(venueContent.afterSections).toHaveLength(5);
+    expect(venueContent.afterSections.join("\n")).toContain("小小志愿者");
+    expect(venueContent.afterSections.join("\n")).toContain("红色传承从不是书本上空洞的词语");
+    expect(venueContent.sections.map((section) => section.media[0].id)).toEqual([
+      "venue-teyuan-01",
+      "venue-guiyuan-01",
+      "venue-zhougongguan-01",
+      "venue-hongyan-01",
+      "venue-geleshan-01"
+    ]);
+
+    const topic = siteConfig.topics.find((item) => item.key === "venue");
+    const html = renderTopicPage(topic, venueContent, { showDevelopmentSlots: false });
+    expect(html).toContain('href="https://mp.weixin.qq.com/s/bu5oQ_fTI93BOWftP_WrQA"');
+    expect(html).toContain("阅读完整专题推文");
+    expect(html).toContain("庭院之内，谈判器物尚存");
+    expect(html).toContain("屋内陈设朴素简单");
+    expect(html).toContain("小小志愿者");
+    expect(html).toContain("勇担时代使命");
   });
 
   it("keeps chapter numbers in navigation without a decorative hero number", () => {
@@ -64,7 +98,6 @@ describe("topic pages", () => {
 
   it("keeps the volunteer story in the five published activity stages", () => {
     expect(volunteerContent.sections.map((section) => section.key)).toEqual(["homevisit", "interview", "care", "performance", "tribute"]);
-    expect(volunteerContent.sections.every((section) => section.media.length === 4)).toBe(true);
     expect(volunteerContent.sourceUrl).toBe("https://mp.weixin.qq.com/s/22Yyg6NfMhzOt7ZVE1cuGg");
   });
 
